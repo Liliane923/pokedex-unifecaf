@@ -1,3 +1,4 @@
+/* Reset básico e fontes */
 * {
     margin: 0;
     padding: 0;
@@ -6,78 +7,80 @@
 }
 
 body {
-    background-color: #f1f5f9;
-    color: #1e293b;
-    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 30px 20px;
 }
 
+/* Cabeçalho */
 header {
     text-align: center;
     margin-bottom: 40px;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    color: #ef4444;
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: 700;
 }
 
 header p {
-    color: #64748b;
+    font-size: 1rem;
+    color: #7f8c8d;
 }
 
-.cards-grid {
+/* Container dos Cards em Grid responsivo */
+#container-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 24px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Estilo Individual do Card */
 .card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
     text-align: center;
-    padding: 15px;
-    border: 2px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
 }
 
+/* Efeito ao passar o rato por cima do card */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    border-color: #cbd5e1;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Imagem do Pokémon */
 .card img {
     width: 120px;
     height: 120px;
     object-fit: contain;
-    margin: 10px auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.08));
 }
 
+/* Informações do Pokémon */
 .card-info h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    color: #0f172a;
+    font-size: 1.15rem;
+    color: #2c3e50;
     text-transform: capitalize;
+    margin-bottom: 6px;
+    font-weight: 600;
 }
 
 .card-info p {
     font-size: 0.9rem;
-    color: #475569;
-    background-color: #f1f5f9;
+    color: #7f8c8d;
+    text-transform: capitalize;
+    background: #f8f9fa;
     display: inline-block;
     padding: 4px 12px;
     border-radius: 20px;
-    text-transform: capitalize;
-}
-
-footer {
-    text-align: center;
-    margin-top: 50px;
-    color: #94a3b8;
-    font-size: 0.85rem;
+    border: 1px solid #edf2f7;
 }
